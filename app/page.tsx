@@ -103,8 +103,10 @@ const HomePage: React.FC = () => {
         <section className="px-4 py-16">
           <div>
             <ul className="grid grid-cols-3 gap-6 max-w-4xl w-full mx-auto">
-              {colections.map((collection) => (
-                <li className="rounded-lg overflow-hidden space-y-2 shadow-lg bg-white">
+              {colections.map((collection, index) => (
+                <li
+                  key={index}
+                  className="rounded-lg overflow-hidden space-y-2 shadow-lg bg-white">
                   <div className="relative w-full aspect-video">
                     <Image
                       src={collection.image}
